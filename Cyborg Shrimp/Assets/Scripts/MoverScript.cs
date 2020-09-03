@@ -38,4 +38,16 @@ public class MoverScript : MonoBehaviour
         print(message: "Down.");
         transform.Translate(0, -speed, 0);
     }
+    
+    public void Left()
+    {
+        print(message: "Up.");
+        transform.Translate(-speed, 0, 0);
+    }
+    
+    public void Right()
+    {
+        print(message: "Up.");
+        transform.Translate(speed, 0, 0);
+    }
 }
