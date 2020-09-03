@@ -5,7 +5,9 @@ using UnityEngine;
 public class MoverScript : MonoBehaviour
 {
     public float speed = 3f;
+
     public float x, y, z;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,7 +19,23 @@ public class MoverScript : MonoBehaviour
     {
         x = speed * Input.GetAxis("Horizontal") * Time.deltaTime;
         y = speed * Input.GetAxis("Vertical") * Time.deltaTime;
-        
-        transform.Translate(x,y,z);
+
+        //var vInput:float = speed * Input.GetAxis("Vertical") * Time.deltaTime;
+        //var vInput:float = speed * Input.GetAxis("Vertical") * Time.deltaTime;
+
+        transform.Translate(x, y, z);
+    }
+    
+
+    public void Up()
+    {
+        print(message: "Up.");
+        transform.Translate(0, speed, 0);
+    }
+
+    public void Down()
+    {
+        print(message: "Down.");
+        transform.Translate(0, -speed, 0);
     }
 }
