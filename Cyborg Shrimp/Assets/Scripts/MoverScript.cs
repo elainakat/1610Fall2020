@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoverScript : MonoBehaviour
 {
-    public float speed = 3f;
+    public float speed = 50f;
 
     public float x, y, z;
 
