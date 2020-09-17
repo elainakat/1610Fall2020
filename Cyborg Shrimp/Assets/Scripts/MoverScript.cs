@@ -8,13 +8,13 @@ public class MoverScript : MonoBehaviour
 
     public float x, y, z;
 
-    // Start is called before the first frame update
+    //public float rotationVector3;
+    
     void Start()
     {
         Debug.Log(message: "Hello World!");
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         x = speed * Input.GetAxis("Horizontal") * Time.deltaTime;
@@ -50,4 +50,10 @@ public class MoverScript : MonoBehaviour
         print(message: "Right.");
         transform.Translate(speed, 0, 0);
     }
+
+    //private void Update()
+    //{
+    //    rotationVector3.y = speed * Time.deltaTime;
+    //    transform.Rotate(rotationVector3);
+    //}
 }

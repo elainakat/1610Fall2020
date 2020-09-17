@@ -14,6 +14,6 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        print(message: "Your score is " + health + "!");
+        print(message: "Your health is " + health + ".");
     }
 }
