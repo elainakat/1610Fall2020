@@ -11,7 +11,7 @@ public class PowerUp : MonoBehaviour
     {
         score++;
         print("Player score is: " + score);
-        powerUpEvent.Invoke();
+        //powerUpEvent.Invoke();
 
     }
 }

@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class UnityEvent : MonoBehaviour
 {
-    public UnityEvent myUnityEvent;
+    /*public UnityEvent myUnityEvent;
     {
         
-    }
+    }*/
 }
