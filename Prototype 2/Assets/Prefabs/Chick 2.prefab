@@ -129,6 +129,8 @@ GameObject:
   - component: {fileID: 8685431220908066111}
   - component: {fileID: 8685431221444024373}
   - component: {fileID: 6413239498605784696}
+  - component: {fileID: 65785917604626812}
+  - component: {fileID: 33509386}
   m_Layer: 0
   m_Name: Chick 2
   m_TagString: Untagged
@@ -145,7 +147,7 @@ Transform:
   m_GameObject: {fileID: 8685431220915453065}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 2.64, y: 0, z: 11.024872}
-  m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
+  m_LocalScale: {x: 0.25893003, y: 0.25893003, z: 0.25893003}
   m_Children:
   - {fileID: 8685431220915879813}
   - {fileID: 8685431220915837493}
@@ -194,6 +196,31 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d18a46056d03904086cf8d1a4ca0062, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &65785917604626812
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8685431220915453065}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.2812436, y: 6.045037, z: 7.6020026}
+  m_Center: {x: 0.0011867946, y: 3.0237176, z: 0.20389026}
+--- !u!114 &33509386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8685431220915453065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63986d9c5a5275644b93ac3b057d124d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8685431220915455015

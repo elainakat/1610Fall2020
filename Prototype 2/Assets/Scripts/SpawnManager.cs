@@ -7,8 +7,8 @@ public class SpawnManager : MonoBehaviour
     public GameObject[] animalPrefabs;
     private float spawnRangeX = 20.0f;
     private float spawnPosZ = 20.0f;
-    private float startDelay = 2.0f;
-    private float spawnInterval = 1.5f;
+    private float startDelay = 0.5f;
+    private float spawnInterval = 0.5f;
     void Start()
     {
         InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
@@ -22,6 +22,7 @@ public class SpawnManager : MonoBehaviour
     void SpawnRandomAnimal()
     {
         Vector3 spawnPos = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        
         int animalIndex = Random.Range(0, animalPrefabs.Length);
         Instantiate(animalPrefabs[animalIndex], spawnPos,
             animalPrefabs[animalIndex].transform.rotation);
