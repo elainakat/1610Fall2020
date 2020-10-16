@@ -5,13 +5,17 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private Rigidbody playerRb;
+    
     public float jumpForce;
     public float gravityModifier;
     public bool isOnGround;
     public bool gameOver = false;
+    
     private Animator playerAnim;
+    
     public ParticleSystem explosionParticle;
     public ParticleSystem dirtParicle;
+    
     public AudioClip jumpSound;
     public AudioClip crashSound;
     private AudioSource playerAudio;
