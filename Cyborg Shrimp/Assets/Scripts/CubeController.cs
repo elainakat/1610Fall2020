@@ -1,19 +1,20 @@
-﻿
-
-using System;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterMover : MonoBehaviour
+public class CubeController : MonoBehaviour
 {
-    
     public CharacterController controller;
-    public float moveSpeed = 5f, gravity = -9.81f, jumpForce = 10f;
-    
-    
+    public float moveSpeed = 10f, gravity = -9.81f, jumpForce = 15f;
+
     private Vector3 moveDirection;
     private float yDirection;
+    void Start()
+    {
+        
+    }
 
-    private void Update()
+    void Update()
     {
         //Speed
         var moveSpeedInput = moveSpeed * Input.GetAxis("Horizontal");
@@ -37,7 +38,5 @@ public class CharacterMover : MonoBehaviour
         //Movement
         var movement = moveDirection * Time.deltaTime;
         controller.Move(movement);
-        
     }
-
 }
