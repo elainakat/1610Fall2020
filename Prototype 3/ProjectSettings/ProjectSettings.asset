@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 18
-  productGUID: 00000000000000000000000000000000
+  productGUID: c200d054265571d4bb48212cbe47026e
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -630,7 +630,7 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   cloudProjectId: d5125569-6e39-44e6-8b22-c77db5288287
   framebufferDepthMemorylessMode: 0
-  projectName: 
+  projectName: Prototype 3
   organizationId: elainakat
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
