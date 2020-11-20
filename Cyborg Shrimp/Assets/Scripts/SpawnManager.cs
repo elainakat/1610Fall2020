@@ -20,7 +20,7 @@ public class SpawnManager : MonoBehaviour
 
     void SpawnBaddie()
     {
-        spawnPos = new Vector3(750, 30, 250);
+        spawnPos = new Vector3(30, 5, 30);
         Instantiate(baddiePrefab, spawnPos, baddiePrefab.transform.rotation);
     }
 }

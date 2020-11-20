@@ -4,15 +4,23 @@ using UnityEngine;
 
 public class Baddie : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public float speed;
+    private Rigidbody baddieRb;
+    private GameObject cube;
+    
     void Start()
     {
-        
+        baddieRb = GetComponent<Rigidbody>();
+        cube = GameObject.Find("Cube");
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        Vector3 lookDirection = (cube.transform.position - transform.position).normalized;
+        baddieRb.AddForce(lookDirection * speed);
+        if (transform.position.y < -10)
+        {
+            Destroy(gameObject);
+        }
     }
 }
