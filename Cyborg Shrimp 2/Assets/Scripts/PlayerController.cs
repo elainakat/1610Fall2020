@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CubeController : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
     private Rigidbody cubeRb;
     
@@ -33,6 +33,13 @@ public class CubeController : MonoBehaviour
         else
         {
             isOnGround = true;
+        }
+        
+        //Destroy out of bounds
+        if (transform.position.y < -10)
+        {
+            Destroy(gameObject);
+            Debug.Log(message: "Game Over");
         }
     }
 }
