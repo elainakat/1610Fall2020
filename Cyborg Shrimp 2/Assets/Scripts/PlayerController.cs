@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody cubeRb;
+    private Rigidbody playerRb;
     
     public float speed;
     public float moveX, moveZ;
@@ -14,20 +14,25 @@ public class PlayerController : MonoBehaviour
     
     void Start()
     {
-        cubeRb = GetComponent<Rigidbody>();
+        playerRb = GetComponent<Rigidbody>();
     }
 
     void Update()
     {
         //Scoot
-        moveX = speed * Input.GetAxis("Horizontal") * Time.deltaTime;
-        moveZ = speed * Input.GetAxis("Vertical") * Time.deltaTime;
-        transform.Translate(moveX, 0, moveZ);
+        //moveX = speed * Input.GetAxis("Horizontal") * Time.deltaTime;
+        //moveZ = speed * Input.GetAxis("Vertical") * Time.deltaTime;
+        //transform.Translate(moveX, 0, moveZ);
+        
+        //Improved Scoot / Roll
+        moveX = Input.GetAxis("Horizontal") * speed;
+        moveZ = Input.GetAxis("Vertical") * speed;
+        playerRb.AddForce(moveX, 0, moveZ, ForceMode.Force);
         
         //Jump
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
         {
-            cubeRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
             isOnGround = false;
         }
         else
