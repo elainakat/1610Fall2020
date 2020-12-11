@@ -5,13 +5,11 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    public GameObject enemyPrefab;
-    private float spawnRange = 18.0f;
-    private Vector3 spawnPos = new Vector3(0,0,0);
+    public GameObject coinPrefab;
     public float repeatRate = 5;
     void Start()
     {
-        InvokeRepeating("SpawnEnemy", 1, repeatRate);
+        InvokeRepeating("SpawnCoin", 1, repeatRate);
     }
 
     void Update()
@@ -21,15 +19,17 @@ public class SpawnManager : MonoBehaviour
 
     private Vector3 GenerateSpawnPosition()
     {
+        float spawnRange = 19.0f;
+        
         float spawnPosX = Random.Range(0, spawnRange);
         float spawnPosZ = Random.Range(0, spawnRange);
-        Vector3 randomPos = new Vector3(spawnPosX, 1, spawnPosZ);
-        return randomPos;
+        Vector3 spawnPos = new Vector3(spawnPosX, 1, spawnPosZ);
+        return spawnPos;
     }
 
-    void SpawnEnemy()
+    void SpawnCoin()
     {
-        spawnPos = GenerateSpawnPosition();
-        Instantiate(enemyPrefab, spawnPos, enemyPrefab.transform.rotation);
+        Vector3 spawnPos = GenerateSpawnPosition();
+        Instantiate(coinPrefab, spawnPos, coinPrefab.transform.rotation);
     }
 }
