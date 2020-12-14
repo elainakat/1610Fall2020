@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
         zInput = Input.GetAxis("Vertical") * speed;
         moveX = xInput + zInput;
         moveZ = -xInput + zInput;
-        playerRb.AddForce(moveX, 0, moveZ, ForceMode.Acceleration);
+        playerRb.AddForce(moveX, 0, moveZ, ForceMode.Impulse);
 
         //Jump
         if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
@@ -39,7 +39,7 @@ public class PlayerController : MonoBehaviour
         if (transform.position.y < -10)
         {
             Destroy(gameObject);
-            Debug.Log(message: "Game Over");
+            print("Game Over");
         }
     }
 
