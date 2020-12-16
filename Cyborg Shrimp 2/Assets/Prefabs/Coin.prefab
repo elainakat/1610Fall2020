@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8489128021616698380}
   - component: {fileID: 6984654156310201814}
   - component: {fileID: 5901411737058217778}
+  - component: {fileID: 1285416194415584231}
   m_Layer: 10
   m_Name: Coin
   m_TagString: Coin
@@ -60,7 +61,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: c0c016dbb289fed40ac39ccdb3bb86c7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -107,5 +108,31 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c48214c834a47b94e830b173e312701a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  changeRate: 2
-  teleportRange: 5
+  changeRate: 1
+  teleportRange: 3
+--- !u!114 &1285416194415584231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8265559844146372126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8634509d63187464596b9d2e96c92548, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerEnterEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: e511ae64ced5bfa4aae11e77cdae4ef2, type: 2}
+        m_MethodName: UpdateScore
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 100
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
